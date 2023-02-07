@@ -3,20 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <title>Facebook Login Page</title>
+  <style>
+    .container{
+      margin: 40px;
+      background-color: lightgrey;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    #login_block{
+      padding: 15px;
+      width: 455px;
+    }
+
+
+    #login_form{
+      background-color: white;
+      /*margin-top: 80px;*/
+    }
+
+    #abstract{
+      /*position: absolute;*/
+      padding-top: 50px;
+      /*padding-bottom: 200px;*/
+      padding-left: 100px;
+      padding-right: 100px;
+      font-size: 2em;
+      width: 600px;
+    }
+
+    .column{
+      display: inline-block;
+    }
+
+    #title{
+      font-size: 90px;
+      color: royalblue;
+    }
+
+    #submit_button{
+      background-color: royalblue;
+      color: white;
+      height: 45px; !important;
+      width: 415px; !important;
+      font-size: 27px;
+    }
+
+    #password_forgot{
+      text-decoration: None;
+      width: 450px;
+      padding-top: 25px;
+      margin-left: 150px;
+      font-size: 25px;
+      /*padding-bottom: 32px;*/
+    }
+
+    input{
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      border-radius: 7px;
+      width: 410px;
+      font-size: 21px;
+      height: 45px;
+    }
+
+    #signup_button{
+      margin-top: 28px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      width: 410px;
+      height: 45px;
+      font-size: 27px;
+      background-color: limegreen;
+      border-radius: 7px;
+    }
+
+
+    #celebrity{
+      font-size: 18px;
+      text-align: center;
+    }
+
+    #celebrity_link{
+      text-decoration: None;
+      font-weight: bold;
+    }
+
+    footer{
+      text-align: center;
+      font-size: 18px;
+      color: #697681;
+      word-spacing: 2em;
+    }
+
+  </style>
 </head>
 <body>
-<form id="login_form">
-  <div>
-    <label for="username">Электронный адрес или номер телефона</label>
-    <input id="username" type="text">
+<div class="container">
+  <div id="abstract" class="column">
+    <strong id="title">  facebook</strong>
+    <br>
+    Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.
   </div>
-  <div>
-    <label for="password">Пароль</label>
-    <input id="password" type="password">
+
+  <div id="login_block" class="column">
+    <form id="login_form" >
+      <input placeholder="Электронный адрес или номер телефона" type="text">
+      <input placeholder="Пароль" type="password">
+      <input type="submit" value="Вход" id="submit_button">
+      <a id="password_forgot">Забыли пароль?</a>
+      <button id="signup_button">Зарегистрироваться</button>
+    </form>
+
+    <p id="celebrity"><a id="celebrity_link">Создать Страницу</a> знаменитости, музыкальной группы или компании.</p>
   </div>
-  <input type="submit" value="Вход">
-  <a>Забыли пароль?</a>
-  <button>Зарегистрироваться</button>
-</form>
+</div>
+
+<footer>Русский
+  English (US)
+  Türkçe
+  Bahasa Indonesia
+  中文(简体)
+  Қазақша
+  Deutsch
+  한국어
+  Shqip
+  Español
+  Português (Brasil)
+  <br>
+  Регистрация Вход Messenger Facebook Lite Watch Места Игры Marketplace
+  <br>
+  Facebook Pay Oculus Portal Instagram Bulletin Благотворительные акции Услуги Центр информации о выборах Политика конфиденциальности Центр конфиденциальности Группы
+  <br>
+  Информация Создать рекламу Создать Страницу Разработчикам Вакансии Файлы cookie Рекламные предпочтения
+  <br>
+  Условия использования Справка Загрузка контактов и лица, не являющиеся пользователямиНастройки Журнал действий
+  <br>
+  Meta © 2023</footer>
 </body>
 </html>
