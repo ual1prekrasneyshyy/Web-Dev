@@ -48,12 +48,13 @@
             color: royalblue;
             width: 450px;
             margin-top: 32px;
-            margin-left: 120px;
-            font-size: 20px;
+            margin-left: 170px;
+            font-size: 16px;
         }
 
         #login_form{
             padding-top: 10px;
+            padding-bottom: 40px;
         }
 
         input{
@@ -72,11 +73,9 @@
             margin-right: 5px;
         }
 
-        #meta{
-            margin-left: 20px;
-        }
-
         #signup{
+            padding-bottom: 29px;
+            padding-top: 29px;
             text-align: center;
             font-size: 19px;
         }
@@ -85,6 +84,13 @@
             color: royalblue;
             font-weight: bold;
             margin-left: 1px; !important;
+        }
+
+        #facebook_login{
+            font-size: 20px;
+            color: royalblue;
+            align-content: center;
+            margin-left: 110px;
         }
 
         #title{
@@ -98,6 +104,22 @@
             align-content: center;
             font-size: 15px;
             color: gray;
+        }
+
+        #higher_footer{
+            padding-left:68px;
+        }
+
+        #lower_footer{
+            padding-left: 650px;
+        }
+
+        #download{
+            margin-left: 40px;
+        }
+
+        #install_app{
+            margin-left: 150px;
         }
     </style>
 </head>
@@ -115,20 +137,25 @@
             <input placeholder="Пароль" type="password">
             <input type="submit" value="Войти" id="submit_button">
 
+            <a href="1.%20facebook.html" id="facebook_login"><img src="static/img/facebook-icon.png" height="20px" alt="facebook"> Войти через Facebook</a>
+
+            <br>
+            <br>
 
             <a id="password_forgot">Забыли пароль?</a>
         </form>
         <div class="white_region" id="signup">
             У вас ещё нет аккаунта? <a id="signup_link">Зарегистрироваться</a>
         </div>
+
+        <p id="install_app">Установите приложение.</p>
+
+        <img id="download" src="static/img/download.png" alt="download">
     </div>
-
-
-
-
 </div>
 
 <footer>
+    <p id="higher_footer">
     <a>Meta</a>
     <a>Информация</a>
     <a>Блог</a>
@@ -142,9 +169,11 @@
     <a>Instagram Lite</a>
     <a>Загрузка контактов и лица, не являющиеся пользователями</a>
     <a>Русский</a>
-<br>
+    </p>
+    <p id="lower_footer">
     <a>Русский</a>
     <a>&copy; 2023 Instagram from Meta</a>
+    </p>
 </footer>
 </body>
 </html>
