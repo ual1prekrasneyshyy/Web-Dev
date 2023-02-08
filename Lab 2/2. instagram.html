@@ -6,20 +6,21 @@
     <style>
         .container{
             background-color: whitesmoke;
+            font-family: sans-serif;
             padding: 50px;
             display: flex;
         }
 
         .block{
-            width: 400px;
-            margin: 30px;
+            width: 450px;
+            margin: 15px;
             display: block;
         }
 
         .white_region{
             border: darkslategrey;
             background-color: white;
-            margin-bottom: 20px;
+            margin-bottom: 26px;
         }
 
         #logo{
@@ -28,24 +29,18 @@
         }
 
         .logo{
-            margin-left: 30px;
+            margin: 12px;
             display: block;
-        }
-
-        #title{
-            margin-top: 80px;
-            text-align: center;
-            font-weight: bold;
-            font-style: italic;
-            font-size: 30px;
+            padding-left: 265px;
         }
 
         #submit_button{
             background-color: royalblue;
             color: white;
-            height: 45px; !important;
-            width: 369px; !important;
+            height: 40px; !important;
+            width: 419px; !important;
             font-size: 27px;
+            border-radius: 7px;
         }
 
         #password_forgot{
@@ -53,18 +48,22 @@
             color: royalblue;
             width: 450px;
             margin-top: 32px;
-            margin-left: 150px;
-            font-size: 25px;
+            margin-left: 120px;
+            font-size: 20px;
+        }
+
+        #login_form{
+            padding-top: 10px;
         }
 
         input{
             margin-left:15px;
             margin-right: 15px;
-            margin-top: 20px;
-            border-radius: 2px;
-            width: 360px;
-            font-size: 21px;
-            height: 45px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            width: 410px;
+            font-size: 17px;
+            height: 40px;
         }
 
         footer{
@@ -84,12 +83,33 @@
 
         #signup{
             text-align: center;
+            font-size: 19px;
         }
 
         #signup_link{
             color: royalblue;
             font-weight: bold;
+            margin-left: 1px; !important;
         }
+
+        #title{
+            align-content: center;
+            margin-bottom: 32px;
+            margin-top: 32px;
+            margin-left: 100px;
+        }
+
+        .hr-text {
+            line-height: 1em;
+            position: relative;
+            outline: 0;
+            border: 0;
+            color: black;
+            text-align: center;
+            height: 1.5em;
+            opacity: .5;
+
+         }
     </style>
 </head>
 <body>
@@ -101,11 +121,11 @@
 
     <div class="block">
         <form id="login_form" class="white_region">
-            <h6 id="title">Instagram</h6>
-            <input placeholder="Имя пользователя, номер телефона или электронный адрес" type="text">
+            <img src="static/img/insta_logo.png" alt="logo" id="title">
+            <input placeholder="Имя пользователя, номер телефона или эл. адрес" type="text">
             <input placeholder="Пароль" type="password">
             <input type="submit" value="Войти" id="submit_button">
-            <hr/>
+
 
             <a id="password_forgot">Забыли пароль?</a>
         </form>
@@ -120,57 +140,22 @@
 </div>
 
 <footer>
-    <a>Русский</a>
-    <a>English (US)</a>
-    <a>Türkçe</a>
-    <a>Bahasa Indonesia</a>
-    <a>中文(简体)</a>
-    <a>Қазақша</a>
-    <a>Deutsch</a>
-    <a>한국어</a>
-    <a>Shqip</a>
-    <a>Español</a>
-    <a>Português (Brasil)</a>
-    <button>+</button>
-    <br>
-    <hr/>
-    <a>Регистрация</a>
-    <a>Вход</a>
-    <a>Messenger</a>
-    <a>Facebook</a>
-    <a>Lite</a>
-    <a>Watch</a>
-    <a>Места</a>
-    <a>Игры</a>
-    <a>Marketplace</a>
-    <a>Facebook</a>
-    <a>Pay</a>
-    <a>Oculus</a>
-    <a>Portal</a>
-    <a>Instagram</a>
-    <a>Bulletin</a>
-    <br>
-    <a>Благотворительные акции</a>
-    <a>Услуги</a>
-    <a>Центр информации о выборах</a>
-    <a>Политика конфиденциальности</a>
-    <a>Центр конфиденциальности</a>
-    <a>Группы</a>
+    <a>Meta</a>
     <a>Информация</a>
-    <br>
-    <a>Создать рекламу</a>
-    <a>Создать Страницу</a>
-    <a>Разработчикам</a>
+    <a>Блог</a>
     <a>Вакансии</a>
-    <a>Файлы cookie</a>
-    <a>Рекламные предпочтения</a>
-    <a>Условия использования</a>
-    <a>Справка</a>
-    <br>
+    <a>Помощь</a>
+    <a>API</a>
+    <a>Конфиденциальность</a>
+    <a>Условия</a>
+    <a>Популярные аккаунты</a>
+    <a>Места</a>
+    <a>Instagram Lite</a>
     <a>Загрузка контактов и лица, не являющиеся пользователями</a>
-
-    <br>
-    <p id="meta">Meta © 2023</p>
+    <a>Русский</a>
+<br>
+    <a>Русский</a>
+    <a>&copy; 2023 Instagram from Meta</a>
 </footer>
 </body>
 </html>
