@@ -10,38 +10,47 @@
             display: flex;
         }
 
-
         .block{
-            background-color: white;
-            width: 300px;
+            width: 400px;
             margin: 30px;
+            display: block;
+        }
+
+        .white_region{
+            border: darkslategrey;
+            background-color: white;
+            margin-bottom: 20px;
         }
 
         #logo{
-            margin-left: 30px;
-            display: block;
             width: 350px;
             height: 500px;
         }
 
+        .logo{
+            margin-left: 30px;
+            display: block;
+        }
+
         #title{
+            margin-top: 80px;
+            text-align: center;
             font-weight: bold;
             font-style: italic;
             font-size: 30px;
-            font-family: cursive;
         }
 
         #submit_button{
             background-color: royalblue;
             color: white;
             height: 45px; !important;
-            width: 415px; !important;
+            width: 369px; !important;
             font-size: 27px;
         }
 
         #password_forgot{
             text-decoration: None;
-            color: dodgerblue;
+            color: royalblue;
             width: 450px;
             margin-top: 32px;
             margin-left: 150px;
@@ -53,20 +62,9 @@
             margin-right: 15px;
             margin-top: 20px;
             border-radius: 2px;
-            width: 410px;
+            width: 360px;
             font-size: 21px;
             height: 45px;
-        }
-
-        #signup_button{
-            margin-top: 28px;
-            margin-bottom: 20px;
-            margin-left: 20px;
-            width: 410px;
-            height: 45px;
-            font-size: 27px;
-            background-color: limegreen;
-            border-radius: 7px;
         }
 
         footer{
@@ -84,25 +82,39 @@
             margin-left: 20px;
         }
 
+        #signup{
+            text-align: center;
+        }
+
+        #signup_link{
+            color: royalblue;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <img id="logo" src="static/img/instagram.png" alt="instagram">
+    <div class="logo">
+        <img id="logo" src="static/img/instagram.png" alt="instagram">
+    </div>
 
 
+    <div class="block">
+        <form id="login_form" class="white_region">
+            <h6 id="title">Instagram</h6>
+            <input placeholder="Имя пользователя, номер телефона или электронный адрес" type="text">
+            <input placeholder="Пароль" type="password">
+            <input type="submit" value="Войти" id="submit_button">
+            <hr/>
 
-    <form class="block">
-        <h6 id="title">Instagram</h6>
-        <input placeholder="Имя пользователя, номер телефона или электронный адрес" type="text">
-        <input placeholder="Пароль" type="password">
-        <input type="submit" value="Войти" id="submit_button">
-        <hr/>
+            <a id="password_forgot">Забыли пароль?</a>
+        </form>
+        <div class="white_region" id="signup">
+            У вас ещё нет аккаунта? <a id="signup_link">Зарегистрироваться</a>
+        </div>
+    </div>
 
-        <a id="password_forgot">Забыли пароль?</a>
-        <hr/>
-        <button id="signup_button">Зарегистрироваться</button>
-    </form>
+
 
 
 </div>
