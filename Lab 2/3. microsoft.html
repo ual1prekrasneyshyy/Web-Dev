@@ -27,14 +27,44 @@
             width: 352px;
         }
 
-        a{
+        .link{
             text-decoration: None;
             color: deepskyblue;
+        }
+
+        .nav{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        header{
+            display: flex;
+        }
+
+        .right_links{
+            float: right;
+        }
+
+        .left_links{
+            float: left;
         }
     </style>
 </head>
 <body>
-<header></header>
+<header>
+    <p class="left_links">
+        <a class="nav">Microsoft</a>
+        <a class="nav">Office</a>
+        <a class="nav">Windows</a>
+        <a class="nav">Поддержка</a>
+    </p>
+    <p class="right_links">
+        <a class="nav">Все продукты Microsoft</a>
+        <a class="nav">Поиск</a>
+        <a class="nav">Корзина</a>
+        <a class="nav">Войти</a>
+    </p>
+</header>
 
 <img id="main_image" src="static/img/main.png" alt="main">
 
