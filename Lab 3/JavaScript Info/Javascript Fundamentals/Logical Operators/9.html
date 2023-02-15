@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const admin = prompt("Who's there?", "")
+
+  if(admin === 'Admin'){
+    password = prompt('Enter password', '')
+      if(password === 'TheMaster')
+          alert('Welcome!')
+      else if(password === null || password === '')
+          alert('Cancelling')
+      else
+          alert('Wrong password')
+  }else if(admin === null || admin === ''){
+    alert('Cancelling')
+  }else{
+      alert("I don't know you")
+  }
+</script>
+</body>
+</html>
