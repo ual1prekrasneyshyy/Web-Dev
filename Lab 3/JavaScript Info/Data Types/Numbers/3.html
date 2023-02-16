@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function readNumber() {
+    let number;
+
+    do {
+      number = prompt('Enter a valid number: ', '');
+    } while ( !isFinite(number) );
+
+    if (number == null || number === '')
+      return null;
+
+    return + number;
+  }
+
+  alert(readNumber());
+</script>
+</body>
+</html>
