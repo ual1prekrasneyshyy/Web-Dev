@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let age = 18;
+  function checkAge(age) {
+    if (age > 18) {
+      return true;
+    } else {
+      return confirm('Did parents allow you?');
+    }
+  }
+
+  let result = checkAge(age);
+
+  //variant 1
+  result = age > 18 ? true : confirm('Did parents allow you?')
+
+  //variant 2
+
+  result = age > 18 || confirm('Did parents allow you?')
+
+</script>
+</body>
+</html>

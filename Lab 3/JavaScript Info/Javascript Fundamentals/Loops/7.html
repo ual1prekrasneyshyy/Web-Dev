@@ -5,6 +5,30 @@
     <title>Primes</title>
 </head>
 <body>
+<script>
+  const n = Number(prompt('Write a number greater than 2: '))
 
+  if(n > 2) {
+
+    let output = `The prime numbers between 2 and ${n} are `;
+
+    for (let i = 2; i <= n; i++) {
+      let prime = true;
+      for (let j = 2; j <= i / 2; j++) {
+        if (!(i % j)) {
+          prime = false;
+          break;
+        }
+      }
+
+      if (prime)
+        output += `${i}, `;
+    }
+
+    alert(output.slice(0, output.length - 2));
+  }else {
+    alert('Error!');
+  }
+</script>
 </body>
 </html>

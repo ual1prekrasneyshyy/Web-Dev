@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  //same results
+  //function 1
+  function checkAge(age) {
+    if (age > 18) {
+      return true;
+    } else {
+      // ...
+      return confirm('Did parents allow you?');
+    }
+  }
+
+  //function 2
+  // function checkAge(age) {
+  //   if (age > 18) {
+  //     return true;
+  //   }
+  //   // ...
+  //   return confirm('Did parents allow you?');
+  // }
+
+  const age = Number(prompt('How old are you?', 0));
+
+  alert(checkAge(age));
+
+</script>
+</body>
+</html>
