@@ -5,9 +5,9 @@ function fillTheList(){
 
     for(let i = 0; i < toDoList.length; i++){
         printedList +=
-            '<div><input type="checkbox"><p>'
-            + toDoList[i] +
-            '</p><button onclick="deleteTask('+i+')">DELETE</button></div>'
+            '<div class="item"><input class="subitem" type="checkbox">' +
+            '<p class="subitem">' + toDoList[i] + '</p>' +
+            '<button class="subitem delete_button" onclick="deleteTask('+i+')">DELETE</button></div>'
     }
 
     document.getElementById('list').innerHTML = printedList;
@@ -15,9 +15,14 @@ function fillTheList(){
 
 
 function addNewTask(){
-    toDoList.push(document.getElementById('new_task').value);
-    document.getElementById('new_task').value = '';
-    fillTheList();
+    const task = document.getElementById('new_task').value
+    if(task && task !== '') {
+        toDoList.push(document.getElementById('new_task').value);
+        document.getElementById('new_task').value = '';
+        fillTheList();
+    }else{
+        alert('Error! ')
+    }
 }
 
 

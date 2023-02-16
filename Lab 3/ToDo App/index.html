@@ -13,8 +13,10 @@
 <div class="container">
     <h1>ToDo List</h1>
 
-    <input id="new_task" type="text" placeholder="New Task">
-    <button onclick="addNewTask()">ADD</button>
+    <form class="add_group">
+        <input class="add_field" id="new_task" type="text" placeholder="New Task">
+    </form>
+    <button onclick="addNewTask()" class="add_field" id="add_button">ADD</button>
 
     <div id="list"></div>
 
