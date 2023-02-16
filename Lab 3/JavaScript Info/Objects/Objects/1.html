@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let user = {
+        name: "John",
+        surname: "Smith"
+    };
+
+    alert(user.name+" "+user.surname);
+
+    user["name"] = "Peter";
+
+    alert(user.name+" "+user.surname);
+
+    delete user.name;
+
+    alert(user.name+" "+user.surname);
+</script>
+</body>
+</html>

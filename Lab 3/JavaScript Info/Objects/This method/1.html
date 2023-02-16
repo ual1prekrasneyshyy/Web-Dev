@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function makeUser() {
+    return {
+      name: "John",
+      ref: this  //this does not work without parameter of fucntion
+    };
+  }
+
+  let user = makeUser();
+
+  alert( user.ref.name ); // nothing
+</script>
+</body>
+</html>
