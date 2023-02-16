@@ -34,13 +34,15 @@ header{
 
 .add_group{
     font-size: 20px;
+    display: inline;
 }
 
 #add_button{
     background-color: #1fba58;
     color: white;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 25px;
+    height: 30px;
 }
 
 .add_field{
