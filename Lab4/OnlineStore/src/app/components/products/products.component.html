@@ -1,7 +1,8 @@
 <div class="container">
   <div class="item" *ngFor="let product of products">
-    <img [src]="product.images[0]" [alt]="product.name" width="100%">
+    <img class="photo" [src]="product.images[0]" [alt]="product.name" width="100%">
     <h4>{{product.name}}</h4>
+    Rating: <span>{{product.rating}}</span>
     <p>{{product.description}}</p>
   </div>
 </div>
