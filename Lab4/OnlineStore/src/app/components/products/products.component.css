@@ -1,9 +1,10 @@
 .container{
-  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .item{
-  width: 25%;
+  width: 40%;
   margin: 30px;
   padding: 25px;
   display: inline-table;
@@ -14,7 +15,7 @@
 }
 
 .photo{
-  height: 180px;
+  height: 160px;
   width: auto;
   align-content: center;
   margin-left: auto;
@@ -58,3 +59,46 @@
   border-style: solid;
   border-radius: 3px;
 }
+
+/*.carousel-container {*/
+/*  width: 70vw;*/
+/*  height: 80vh;*/
+/*  margin: 16px auto;*/
+/*}*/
+
+/*:host ::ng-deep {*/
+
+/*  .image-container {*/
+/*    max-width: 85%;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*  }*/
+/*  */
+/*  .igx-carousel {*/
+/*    max-width: 100%;*/
+/*    width: unset;*/
+/*  }*/
+/*  */
+/*  .igx-nav-dot {*/
+/*    background: black;*/
+/*    box-shadow: none;*/
+/*    width: 15px;*/
+/*    height: 15px;*/
+/*  }*/
+/*  */
+/*  .igx-slide {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    max-width: 100%;*/
+/*    width: unset;*/
+/*  }*/
+/*  */
+/*  .igx-slide img {*/
+/*    object-fit: fill;*/
+/*    max-width: 90%;*/
+/*  }*/
+
+/*}*/
+
