@@ -1,6 +1,10 @@
 <div class="container">
   <div class="item" *ngFor="let product of products">
-    <img class="photo" [src]="product.images[0]" [alt]="product.name" width="100%">
+    <igx-carousel #carousel>
+      <igx-slide *ngFor="let image of product.images">
+        <img class="photo" [src]="image" [alt]="product.name" width="100%">
+      </igx-slide>
+    </igx-carousel>
     <h2>{{product.name}}</h2>
     Rating: <span>{{product.rating}}</span>
     <h3>Описание:</h3>
