@@ -1,5 +1,5 @@
 export interface Product {
-  images: [];
+  images: string[];
   name: string;
   description: string;
   rating: number;

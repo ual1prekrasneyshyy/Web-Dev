@@ -3,6 +3,19 @@
 }
 
 .item{
-  width: 30%;
-  margin: 15px;
+  width: 27%;
+  margin: 30px;
+  padding: 10px;
+  display: inline-block;
+  border-color: orangered;
+  border-right: 5px;
+}
+
+img{
+  height: 300px;
+  width: auto;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
