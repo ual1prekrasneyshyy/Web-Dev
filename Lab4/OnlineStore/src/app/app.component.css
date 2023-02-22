@@ -1,4 +1,4 @@
-header{
+.header{
   background: orangered;
   padding-left: 15px;
 }
@@ -6,4 +6,11 @@ header{
 #logo{
   color: white;
   font-size: 50px;
+}
+
+.footer{
+  padding: 10px;
+  background: cornsilk;
+  text-align: center;
+  font-size: 15px;
 }
