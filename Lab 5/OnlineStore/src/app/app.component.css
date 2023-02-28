@@ -1,0 +1,16 @@
+.header{
+  background: orangered;
+  padding-left: 15px;
+}
+
+#logo{
+  color: white;
+  font-size: 50px;
+}
+
+.footer{
+  padding: 14px;
+  background: cornsilk;
+  text-align: center;
+  font-size: 19px;
+}
