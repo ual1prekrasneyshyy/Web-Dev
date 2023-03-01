@@ -1,8 +1,9 @@
 export interface Item {
   id: number;
-  images: string[];
+  image_link: string;
   name: string;
   description: string;
   rating: number;
+  likes: number;
   link: string;
 }
