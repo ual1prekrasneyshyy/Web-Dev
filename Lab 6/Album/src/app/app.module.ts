@@ -9,6 +9,7 @@ import {AlbumDetailComponent} from "./components/album-detail/album-detail.compo
 import {AlbumPhotosComponent} from "./components/album-photos/album-photos.component";
 import {AlbumsService} from "./services/albums.service";
 import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {AppRoutingModule} from "./app-routing.module";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [AlbumsService],
   bootstrap: [AppComponent]
