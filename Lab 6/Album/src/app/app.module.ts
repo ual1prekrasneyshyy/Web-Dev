@@ -8,6 +8,7 @@ import {AlbumsComponent} from "./components/albums/albums.component";
 import {AlbumDetailComponent} from "./components/album-detail/album-detail.component";
 import {AlbumPhotosComponent} from "./components/album-photos/album-photos.component";
 import {AlbumsService} from "./services/albums.service";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {AlbumsService} from "./services/albums.service";
     AlbumPhotosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [AlbumsService],
   bootstrap: [AppComponent]
