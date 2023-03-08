@@ -1,9 +1,12 @@
 <div *ngIf="loaded">
 
-  <button (click)="goBack()">Return Back</button>
+  <button class="back_button" (click)="goBack()">Return Back</button>
 
-  <div *ngFor="let photo of photos">
-    <img [src]="photo.url" [alt]="photo.title">
+  <div *ngFor="let photo of photos" class="gallery">
+      <div class="image_group">
+      <h3>{{photo.title}}</h3>
+      <img [src]="photo.url" [alt]="photo.title">
+    </div>
   </div>
 </div>
 

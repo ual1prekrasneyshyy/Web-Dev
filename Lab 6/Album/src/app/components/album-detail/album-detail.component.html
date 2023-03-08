@@ -1,12 +1,12 @@
 <div *ngIf="loaded" class="body">
-  <div>
-  <h4 class="title">{{album.title}}</h4>
-  <button class="change_button" (click)="(toEdit=true)">Change</button>
+  <div class="title_group">
+  <p class="title">{{album.title}}</p>
+  <button class="change_button" (click)="(toEdit=true)">Change title</button>
   </div>
 
   <form *ngIf="toEdit" (submit)="updateAlbum()">
     <input [(ngModel)]="album.title" name="title">
-    <input type="submit" value="SAVE">
+    <input class="save_button" type="submit" value="SAVE">
   </form>
 
   <button class="back_button" (click)="goBack()">Return back</button>

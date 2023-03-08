@@ -19,10 +19,13 @@
 }
 
 .footer {
-  width: 99%;
+  width: 98%;
   color: gray;
   background: antiquewhite;
   font-size: 17px;
+  position: fixed;
+  bottom: 0;
+  padding: 18px;
 }
 
 .align-right {
@@ -32,3 +35,4 @@
 .block{
   display: inline;
 }
+
