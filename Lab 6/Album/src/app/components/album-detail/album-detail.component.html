@@ -1,1 +1,7 @@
-<p>album-detail works!</p>
+<h6>{{album.title}}</h6>
+<button (click)="(toEdit=true)">Change</button>
+
+<form *ngIf="toEdit" (submit)="updateAlbum()">
+  <input [(ngModel)]="album.title">
+  <input type="submit" value="SAVE">
+</form>

@@ -1,0 +1,19 @@
+.album_line {
+  font-size: 19px;
+  border-radius: 3px;
+  border-color: chocolate;
+}
+
+.delete_button {
+  background: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.view_button{
+  background: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+

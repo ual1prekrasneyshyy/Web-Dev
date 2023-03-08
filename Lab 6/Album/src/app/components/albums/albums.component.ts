@@ -7,16 +7,24 @@ import {Album} from "../../models/album";
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.css']
 })
-export class AlbumsComponent{
+export class AlbumsComponent implements OnInit {
 
-  albums: Album[] = [];
-  error = false
+  albums: Album[];
 
-  constructor(private albums_service: AlbumsService) {
-    this.albums_service.get_all_albums().subscribe(albums => {
+  constructor(private albumsService: AlbumsService) {
+    this.albums = [];
+  }
+
+  ngOnInit(): void {
+    this.albumsService.getAllAlbums().subscribe((albums: Album[]) => {
       this.albums = albums;
-    }, error => {
-      this.error = true
+    });
+  }
+
+
+  deleteAlbum(id: number, index: number){
+    this.albumsService.deleteAlbum(id).subscribe( _=> {
+      this.albums.splice(index, 1);
     });
   }
 

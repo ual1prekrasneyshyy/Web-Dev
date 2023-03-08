@@ -9,17 +9,29 @@ import {Photo} from "../models/photo";
 })
 export class AlbumsService {
 
-  constructor(private http: HttpClient) { }
+  BASE_URL = '';
 
-  public get_all_albums(): Observable<Album[]> {
-    return this.http.get<Album[]>('https://jsonplaceholder.typicode.com/albums');
+  constructor(private http: HttpClient) {
+    this.BASE_URL = 'https://jsonplaceholder.typicode.com/albums';
   }
 
-  public get_album_by_id(album_id: number): Observable<Album> {
-    return this.http.get<Album>(`https://jsonplaceholder.typicode.com/albums/${album_id}`);
+  public getAllAlbums(): Observable<Album[]> {
+    return this.http.get<Album[]>(this.BASE_URL);
   }
 
-  public get_photos_by_album_id(album_id: number): Observable<Photo[]> {
-    return this.http.get<Photo[]>(`https://jsonplaceholder.typicode.com/albums/${album_id}/photos`);
+  public getAlbumById(id: number): Observable<Album> {
+    return this.http.get<Album>(`${this.BASE_URL}/${id}`);
+  }
+
+  public deleteAlbum(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.BASE_URL}/${id}`);
+  }
+
+  public updateAlbum(id: number, album: Album): Observable<Album> {
+    return this.http.patch<any>(`${this.BASE_URL}/${id}`, album);
+  }
+
+  public getPhotosByAlbumId(albumId: number): Observable<Photo[]> {
+    return this.http.get<Photo[]>(`${this.BASE_URL}/${albumId}/photos`);
   }
 }
