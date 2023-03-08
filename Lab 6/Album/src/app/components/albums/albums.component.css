@@ -1,13 +1,19 @@
 .album_line {
   font-size: 19px;
-  border-radius: 3px;
-  border-color: chocolate;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid coral;
+  border-radius: 6px;
 }
 
 .delete_button {
   background: red;
   color: white;
   border-radius: 5px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 19px;
+  display: block;
 }
 
 .view_button{
@@ -15,5 +21,8 @@
   color: white;
   border-radius: 5px;
   text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
