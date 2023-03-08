@@ -1,0 +1,19 @@
+.title{
+  font-size: 40px;
+  color: darkblue;
+}
+
+.body {
+  margin: 9px;
+  padding: 9px;
+  border: 2px solid lightcoral;
+  border-radius: 4px;
+}
+
+.change_button{
+  background: dodgerblue;
+  border: dodgerblue;
+  border-radius: 6px;
+  color: white;
+  font-size: 22px;
+}
