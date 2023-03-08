@@ -1,7 +1,16 @@
-<h6>{{album.title}}</h6>
-<button (click)="(toEdit=true)">Change</button>
+<div *ngIf="loaded">
+  <h6>{{album.title}}</h6>
+  <button (click)="(toEdit=true)">Change</button>
 
-<form *ngIf="toEdit" (submit)="updateAlbum()">
-  <input [(ngModel)]="album.title">
-  <input type="submit" value="SAVE">
-</form>
+  <form *ngIf="toEdit" (submit)="updateAlbum()">
+    <input [(ngModel)]="album.title" name="title">
+    <input type="submit" value="SAVE">
+  </form>
+
+  <button (click)="goBack()">Return back</button>
+  <a routerLink="photos">Photos</a>
+</div>
+
+<div *ngIf="!loaded" class="loading">
+  Loading...
+</div>
