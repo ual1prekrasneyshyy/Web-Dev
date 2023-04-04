@@ -27,3 +27,10 @@ def get_category_by_id(request, id):
     return JsonResponse(category.to_json())
 
 
+def get_products_list_by_category_id(request, id):
+    category = Category.objects.get(id=id)
+    products = category.product_set.all()
+    products_json = [p.to_json() for p in products]
+    return JsonResponse(products_json, safe=False)
+
+
