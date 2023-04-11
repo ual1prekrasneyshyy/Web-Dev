@@ -22,6 +22,9 @@ class Company(models.Model):
             'address': self.address
         }
 
+    def __str__(self):
+        return f'Company(id={self.id}, name={self.name}, description={self.description}, city={self.city}, address={self.address})'
+
 
 class Vacancy(models.Model):
     name = models.CharField(max_length=50, default='')
@@ -41,3 +44,6 @@ class Vacancy(models.Model):
             'description': self.description,
             'salary': self.salary
         }
+
+    def __str__(self):
+        return f'Vacancy(id={self.id}, name={self.name}, description={self.description}, salary={self.salary}, company={self.company.name})'
