@@ -21,9 +21,9 @@ def get_company_by_id(request, id):
 
 def get_vacancies_by_company(request, id):
     try:
-        # company = Company.objects.get(id=id)
-        # vacancies = company.vacancies()
-        vacancies = Vacancy.objects.filter(company_id=id)
+        company = Company.objects.get(id=id)
+        vacancies = company.vacancies.all()
+        # vacancies = Vacancy.objects.filter(company_id=id)
         vacancies_in_json_format = [v.to_json() for v in vacancies]
         return JsonResponse(vacancies_in_json_format, safe=False)
     except Company.DoesNotExist as e:
