@@ -9,7 +9,6 @@
   </div>
 
   <div *ngIf="!not_founded">
-    <h2>{{company.name}}</h2>
     <table>
       <thead>
       <tr>
@@ -17,14 +16,16 @@
         <th>Name</th>
         <th>Description</th>
         <th>Salary</th>
+        <th>Company</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let v of company.vacancies">
+      <tr *ngFor="let v of vacancies">
         <td>{{v.id}}</td>
         <td>{{v.name}}</td>
         <td>{{v.description}}</td>
         <td>{{v.salary}}</td>
+        <td>{{v.company_name}}</td>
       </tr>
       </tbody>
     </table>

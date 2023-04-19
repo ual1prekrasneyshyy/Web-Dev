@@ -33,6 +33,6 @@ class CompanyDetailsAPIView(APIView):
 
 #fbv
 def get_top_ten_vacancies(request):
-    vacancies = Vacancy.objects.all()
+    vacancies = Vacancy.objects.all().order_by('-salary')[:10]
     serializer = VacanciesSerializer(vacancies, many=True)
     return JsonResponse(serializer.data, safe=False)

@@ -1,14 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {CompaniesService} from "../../services/companies.service";
-import {Company} from "../../models/company";
 import {Vacancy} from "../../models/vacancy";
 import {VacanciesService} from "../../services/vacancies.service";
 
 @Component({
-  selector: 'app-company',
-  templateUrl: './company.component.html',
-  styleUrls: ['./company.component.css']
+  selector: 'app-top-vacancies',
+  templateUrl: './top-vacancies.component.html',
+  styleUrls: ['./top-vacancies.component.css']
 })
 export class TopVacanciesComponent implements OnInit{
 

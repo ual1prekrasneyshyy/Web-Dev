@@ -18,6 +18,6 @@ export class CompaniesService {
   }
 
   public get_company_by_id(id: number): Observable<Company>{
-    return this.http.get<Company>(`${this.BASE_URL}${id}`);
+    return this.http.get<Company>(`${this.BASE_URL}${id}/`);
   }
 }
