@@ -1,0 +1,21 @@
+table, th, td{
+  border: 1px solid gray;
+}
+
+th, td{
+  padding: 10px;
+  background-color: cadetblue;
+}
+
+th {
+  color: yellow;
+}
+
+td{
+  color: white;
+}
+
+a{
+  text-decoration: None;
+  color: aqua;
+}

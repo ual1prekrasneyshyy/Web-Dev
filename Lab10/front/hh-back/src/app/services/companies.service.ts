@@ -10,7 +10,7 @@ export class CompaniesService {
   private BASE_URL: string;
 
   constructor(private http: HttpClient) {
-    this.BASE_URL = 'http://localhost:8000/api/companies/';
+    this.BASE_URL = 'http://127.0.0.1:8000/api/companies/';
   }
 
   public get_all_companies_list(): Observable<Company[]>{

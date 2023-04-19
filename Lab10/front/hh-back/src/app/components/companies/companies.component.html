@@ -1,1 +1,35 @@
-<p>companies works!</p>
+<div *ngIf="!loaded">
+  Loading...
+</div>
+
+
+<div *ngIf="loaded">
+  <div *ngIf="not_founded">
+    Companies not founded!
+  </div>
+
+  <div *ngIf="!not_founded">
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>City</th>
+        <th>Address</th>
+        <th>Vacancies</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let c of companies">
+        <td>{{c.id}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.description}}</td>
+        <td>{{c.city}}</td>
+        <td>{{c.address}}</td>
+        <td><a [routerLink]="[c.id]" target="_blank">Vacancies</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
