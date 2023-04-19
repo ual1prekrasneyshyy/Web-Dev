@@ -9,6 +9,7 @@ from api.models import Company, Vacancy
 
 
 # Create your views here.
+#cbv
 class CompaniesListAPIView(APIView):
     def get(self, request):
         companies = Company.objects.all()
@@ -16,6 +17,7 @@ class CompaniesListAPIView(APIView):
         return Response(serializer.data)
 
 
+#cbv
 class CompanyDetailsAPIView(APIView):
     def get_company(self, company_id):
         try:
@@ -29,6 +31,7 @@ class CompanyDetailsAPIView(APIView):
         return Response(serializer.data)
 
 
+#fbv
 def get_top_ten_vacancies(request):
     vacancies = Vacancy.objects.all()
     serializer = VacanciesSerializer(vacancies, many=True)
