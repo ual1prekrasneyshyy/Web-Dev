@@ -1,1 +1,32 @@
-<p>company works!</p>
+<div *ngIf="!loaded">
+  Loading...
+</div>
+
+
+<div *ngIf="loaded">
+  <div *ngIf="not_founded">
+    Company not founded!
+  </div>
+
+  <div *ngIf="!not_founded">
+    <h2>{{company.name}}</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Salary</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let v of company.vacancies">
+        <td>{{v.id}}</td>
+        <td>{{v.name}}</td>
+        <td>{{v.description}}</td>
+        <td>{{v.salary}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
