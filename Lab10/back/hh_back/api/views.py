@@ -1,51 +1,35 @@
 from django.http import JsonResponse
 from django.shortcuts import render
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from api.serializers import CompaniesSerializer, VacanciesSerializer
 
 from api.models import Company, Vacancy
 
 
 # Create your views here.
-def get_all_companies_list(request):
-    companies = Company.objects.all()
-    companies_in_json_format = [c.to_json() for c in companies]
-    return JsonResponse(companies_in_json_format, safe=False)
+class CompaniesListAPIView(APIView):
+    def get(self, request):
+        companies = Company.objects.all()
+        serializer = CompaniesSerializer(companies, many=True)
+        return Response(serializer.data)
 
 
-def get_company_by_id(request, id):
-    try:
-        company = Company.objects.get(id=id)
-        return JsonResponse(company.to_json())
-    except Company.DoesNotExist as e:
-        return JsonResponse({'error': str(e)}, status=400)
+class CompanyDetailsAPIView(APIView):
+    def get_company(self, company_id):
+        try:
+            return Company.objects.get(pk=company_id)
+        except Company.DoesNotExist as e:
+            return Response(str(e), status=status.HTTP_400_BAD_REQUEST)
+
+    def get(self, request, company_id):
+        company = self.get_company(company_id)
+        serializer = CompaniesSerializer(company)
+        return Response(serializer.data)
 
 
-def get_vacancies_by_company(request, id):
-    try:
-        company = Company.objects.get(id=id)
-        vacancies = company.vacancies.all()
-        # vacancies = Vacancy.objects.filter(company_id=id)
-        vacancies_in_json_format = [v.to_json() for v in vacancies]
-        return JsonResponse(vacancies_in_json_format, safe=False)
-    except Company.DoesNotExist as e:
-        return JsonResponse({'error': str(e)}, status=400)
-
-
-def get_all_vacancies_list(request):
+def get_top_ten_vacancies(request):
     vacancies = Vacancy.objects.all()
-    vacancies_in_json_format = [v.to_json() for v in vacancies]
-    return JsonResponse(vacancies_in_json_format, safe=False)
-
-
-def get_vacancy_by_id(request, id):
-    try:
-        vacancy = Vacancy.objects.get(id=id)
-        return JsonResponse(vacancy.to_json())
-    except Vacancy.DoesNotExist as e:
-        return JsonResponse({'error': str(e)}, status=400)
-
-
-def get_top_ten_vacancies_list(request):
-    vacancies = Vacancy.objects.order_by("-salary")[:10]
-    vacancies_in_json_format = [v.to_json() for v in vacancies]
-    return JsonResponse(vacancies_in_json_format, safe=False)
-
+    serializer = VacanciesSerializer(vacancies, many=True)
+    return JsonResponse(serializer.data, safe=False)
